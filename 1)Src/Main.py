@@ -50,10 +50,7 @@ def generate_excel_graph(file_path: str, x_col: str, y_col: str, output_name: st
     else:
         print(f"Unknown graph type '{graph_type}', defaulting to line plot.")
         plt.plot(df[x_col], df[y_col], color='g', marker='D')
-
-    # Create line plot: green line, diamond markers, and solid style
-    plt.plot(x, y, 'g', marker='D', markersize=10,
-             markeredgecolor='blue', linestyle='solid')
+    
     # Label the axes for clarity
     plt.xlabel(x_col)
     plt.ylabel(y_col)
@@ -74,3 +71,4 @@ generate_excel_graph(
     output_name=r"D:\Python Things\csv-data-viz-engine\Output\rainfall.png",
     graph_type="bar"
 )
+
